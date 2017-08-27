@@ -1,12 +1,1 @@
-sudo: required
-
-language: generic
-
-services:
-  - docker
-
-before_script:
-  - docker-compose build
-
-script:
-  - docker-compose run -e CODECOV_TOKEN -e CI react yarn run coverage
+language: node_js
