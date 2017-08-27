@@ -1,4 +1,6 @@
-export default {
+import createMuiTheme from 'material-ui/styles/theme';
+
+export const scTheme = {
   primaryColor: 'hsla(231, 48%, 48%, 1)',
   primaryColorDark: 'hsla(232, 54%, 41%, 1)',
   primaryColorLight: 'hsla(232, 45%, 84%, 1)',
@@ -8,3 +10,5 @@ export default {
   secondaryTextColor: 'hsla(0, 0%, 46%, 1)',
   dividerColor: 'hsla(0, 0%, 74%, 1)',
 };
+
+export const muiTheme = createMuiTheme();

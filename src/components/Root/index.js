@@ -1,5 +1,7 @@
+/* eslint-disable global-require */
 if (process.env.NODE_ENV === 'production') {
-  module.exports = require('./Root');
+  module.exports = require('./component');
 } else {
-  module.exports = require('./Root.dev');
+  module.exports = require('./component.dev');
 }
+/* eslint-enable global-require */

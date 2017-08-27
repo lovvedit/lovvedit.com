@@ -1,7 +1,7 @@
+import React from 'react';
 import Loadable from 'react-loadable';
-
-import Spinner from '../components/Spinner';
+import { LinearProgress } from 'material-ui/Progress';
 
 export default function CustomLoadable(opts) {
-  return Loadable({ loading: Spinner, timeout: 10, ...opts });
+  return Loadable({ loading: () => <LinearProgress />, timeout: 10, ...opts });
 }

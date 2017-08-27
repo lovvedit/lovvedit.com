@@ -3,7 +3,7 @@ import loggerMiddleware from 'redux-logger';
 import { routerMiddleware as createRouterMiddleware } from 'react-router-redux';
 import createSagaMiddleware, { END } from 'redux-saga';
 
-import DevTools from '../components/Root/components/DevTools';
+import DevTools from '../components/DevTools';
 import rootReducer from '../rootReducer';
 import history from '../config/history';
 import client from '../config/apolloClient';
