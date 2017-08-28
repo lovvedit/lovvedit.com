@@ -5,6 +5,9 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
+import styled from 'styled-components';
+
+const StyledTitle = styled.span`margin-left: 2rem;`;
 
 const CustomAppBar = ({ title, onMenuClick }) =>
   (<AppBar position="static">
@@ -13,7 +16,9 @@ const CustomAppBar = ({ title, onMenuClick }) =>
         <MenuIcon />
       </IconButton>
       <Typography type="title" color="inherit">
-        {title}
+        <StyledTitle>
+          {title}
+        </StyledTitle>
       </Typography>
     </Toolbar>
   </AppBar>);

@@ -1,10 +1,5 @@
-import React from 'react';
-import Button from 'material-ui/Button';
+import withWidth from 'material-ui/utils/withWidth';
 
-export default function Home() {
-  return (
-    <div>
-      <Button>Hola</Button>
-    </div>
-  );
-}
+import Home from './component';
+
+export default withWidth()(Home);
