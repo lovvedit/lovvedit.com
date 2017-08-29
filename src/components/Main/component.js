@@ -15,11 +15,12 @@ const StyledMain = styled.main`
   }
 `;
 
-const Main = () =>
-  (<StyledMain>
+const Main = () => (
+  <StyledMain>
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route path="/:category" component={Home} />
     </Switch>
-  </StyledMain>);
+  </StyledMain>
+);
 
 export default Main;
