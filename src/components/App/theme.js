@@ -1,4 +1,4 @@
-import createMuiTheme from 'material-ui/styles/theme';
+import { createMuiTheme } from 'material-ui';
 
 export const scTheme = {
   primaryColor: 'hsla(231, 48%, 48%, 1)',

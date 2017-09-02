@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ApolloProvider } from 'react-apollo';
 import { ConnectedRouter } from 'react-router-redux';
 
-import App from './components/App';
+import App from '../App';
 
 export default function Root({ store, client, history }) {
   return (

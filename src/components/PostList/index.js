@@ -1,34 +1,20 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { graphql } from 'react-apollo';
+import { branch, renderComponent } from 'recompose';
 import gql from 'graphql-tag';
-import { withProps, mapProps } from 'recompose';
 import { last, compose } from 'ramda';
 
 import PostList from './component';
+import { selectors as homeSelectors } from '../../scenes/Home';
 
 const FetchPostsQuery = gql`
-  query FetchPosts($category: Category = SHOW) {
-    posts(filters: { category: $category }) {
-      edges {
-        cursor
-        node {
-          title
-        }
-      }
-      pageInfo {
-        hasNextPage
-      }
-    }
-  }
-`;
-
-const FetchMorePostsQuery = gql`
-  query FetchMorePosts($category: Category = SHOW, $after: String!) {
+  query FetchPosts($category: Category = SHOW, $after: String) {
     posts(filters: { category: $category }, pagination: { after: $after }) {
       edges {
         cursor
         node {
+          id
           title
         }
       }
@@ -40,35 +26,31 @@ const FetchMorePostsQuery = gql`
 `;
 
 const withPosts = graphql(FetchPostsQuery, {
-  options: ({ category }) => ({ variables: { category } }),
-  props: ({ ownProps: { category }, data: { posts: { edges }, fetchMore, loading } }) => ({
-    loading,
+  options: ({ category, after = null }) => ({ variables: { category, after } }),
+  props: ({ ownProps: { category }, data: { posts, loading, fetchMore } }) => ({
+    posts,
     category,
-    rowCount: edges.length,
-    loadMoreRows: () =>
+    loading,
+    loadMorePosts: () =>
       fetchMore({
-        query: FetchMorePostsQuery,
-        variables: { after: last(edges).cursor, category },
-        updateQuery: ({ entry }, { fetchMoreResult: { posts: newPosts } }) => ({
+        variables: { after: last(posts.edges).cursor, category },
+        updateQuery: ({ entry: previousEntry }, { fetchMoreResult: { posts: newPosts } }) => ({
           entry: {
-            posts: [...entry.posts, ...newPosts],
+            edges: [...previousEntry.edges, ...newPosts.edges],
           },
         }),
       }),
   }),
 });
 
-const rowRenderer = ({ key, style }) => (
-  <div key={key} style={style}>
-    hola
-  </div>
-);
+const mapStateToProps = state => ({
+  category: homeSelectors.getCategory(state),
+});
 
 const enhance = compose(
-  withRouter,
-  withProps({ rowRenderer, isRowLoaded: () => true }),
+  connect(mapStateToProps),
   withPosts,
-  mapProps(props => ({ ...props, category: props.match.params.category })),
+  branch(({ loading }) => loading, renderComponent(() => <div>loading...</div>)),
 );
 
 export default enhance(PostList);

@@ -9,8 +9,8 @@ export function* changeAppBarTitle({ payload: { pathname } }) {
     yield put(actions.setTitle('lovvedit'));
   } else if (pathname === pathnames.MOVIES) {
     yield put(actions.setTitle('Movies'));
-  } else if (pathname === pathnames.SERIES) {
-    yield put(actions.setTitle('Series'));
+  } else if (pathname === pathnames.SHOWS) {
+    yield put(actions.setTitle('TV Shows'));
   } else if (pathname === pathnames.BOOKS) {
     yield put(actions.setTitle('Books'));
   } else {

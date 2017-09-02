@@ -10,16 +10,17 @@ import BookIcon from 'material-ui-icons/Book';
 import StyledList from './components/StyledList';
 import Item from './components/Item';
 
-const CustomDrawer = ({ open, close }) =>
-  (<Drawer open={open} onClick={close} onRequestClose={close}>
+const CustomDrawer = ({ open, close }) => (
+  <Drawer open={open} onClick={close} onRequestClose={close}>
     <StyledList>
       <Item text="All" to={{ pathname: '/' }} icon={<HomeIcon />} />
       <Item text="Movies" to={{ pathname: '/movies' }} icon={<MovieIcon />} />
-      <Item text="Series" to={{ pathname: '/series' }} icon={<TvIcon />} />
+      <Item text="Shows" to={{ pathname: '/shows' }} icon={<TvIcon />} />
       <Item text="Books" to={{ pathname: '/books' }} icon={<BookIcon />} />
     </StyledList>
     <Divider />
-  </Drawer>);
+  </Drawer>
+);
 
 CustomDrawer.propTypes = {
   open: PropTypes.bool,

@@ -1,36 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { List, WindowScroller, InfiniteLoader, AutoSizer } from 'react-virtualized';
+import { compose, map } from 'ramda';
 
-const PostList = ({ posts, isRowLoaded, loadMoreRows, rowRenderer, rowCount }) => (
-  <div>
-    <InfiniteLoader isRowLoaded={isRowLoaded} loadMoreRows={loadMoreRows} rowCount={rowCount}>
-      {({ onRowsRendered, registerChild }) => (
-        <WindowScroller>
-          {({ height, isScrolling, scrollTop }) => (
-            <AutoSizer disableHeight>
-              {({ width }) => (
-                <List
-                  ref={registerChild}
-                  autoHeight
-                  height={height}
-                  width={width}
-                  rowHeight={20}
-                  rowCount={rowCount}
-                  isScrolling={isScrolling}
-                  scrollTop={scrollTop}
-                  rowRenderer={rowRenderer}
-                  onRowsRendered={onRowsRendered}
-                />
-              )}
-            </AutoSizer>
-          )}
-        </WindowScroller>
-      )}
-    </InfiniteLoader>;
-  </div>
-);
+import Post, { postPropType } from './components/Post';
 
-PostList.propTypes = {};
+const renderPosts = posts =>
+  compose(map(post => <Post post={post} key={post.id} />), map(edge => edge.node))(posts.edges);
+
+const PostList = ({ posts, loadMorePosts }) => <div>{renderPosts(posts)}</div>;
+
+PostList.propTypes = {
+  posts: PropTypes.shape({
+    edges: PropTypes.arrayOf(PropTypes.shape({ node: postPropType })),
+  }).isRequired,
+  loadMorePosts: PropTypes.func.isRequired,
+};
 
 export default PostList;
