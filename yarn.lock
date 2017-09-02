@@ -2363,8 +2363,8 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.18:
-  version "1.3.19"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.19.tgz#73d97b0e8b05aa776cedf3cdce7fdc0538037675"
+  version "1.3.20"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.20.tgz#2eedd5ccbae7ddc557f68ad1fce9c172e915e4e5"
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -2713,9 +2713,9 @@ eslint@4.4.1:
     table "^4.0.1"
     text-table "~0.2.0"
 
-eslint@4.5.0, eslint@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.5.0.tgz#bb75d3b8bde97fb5e13efcd539744677feb019c3"
+eslint@4.6.0, eslint@^4.5.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.6.0.tgz#98ced4a706a87abbe63207895d0023a38e250bbe"
   dependencies:
     ajv "^5.2.0"
     babel-code-frame "^6.22.0"
@@ -3463,15 +3463,15 @@ has-flag@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-2.0.0.tgz#e8207af1cc7b30d446cc70b734b5e8be18f88d51"
 
-has-symbol-support-x@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/has-symbol-support-x/-/has-symbol-support-x-1.4.0.tgz#442d89b1d0ac6cf5ff2f7b916ee539869b93a256"
+has-symbol-support-x@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/has-symbol-support-x/-/has-symbol-support-x-1.4.1.tgz#66ec2e377e0c7d7ccedb07a3a84d77510ff1bc4c"
 
-has-to-string-tag-x@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/has-to-string-tag-x/-/has-to-string-tag-x-1.4.0.tgz#49d7bcde85c2409be38ac327e3e119a451657c7b"
+has-to-string-tag-x@^1.4.0, has-to-string-tag-x@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/has-to-string-tag-x/-/has-to-string-tag-x-1.4.1.tgz#a045ab383d7b4b2012a00148ab0aa5f290044d4d"
   dependencies:
-    has-symbol-support-x "^1.4.0"
+    has-symbol-support-x "^1.4.1"
 
 has-unicode@^2.0.0:
   version "2.0.1"
@@ -3927,15 +3927,15 @@ is-fullwidth-code-point@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
 
-is-function-x@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/is-function-x/-/is-function-x-3.1.0.tgz#7f1a0e36e7b46013e4718807f0a20cc8744b63a9"
+is-function-x@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/is-function-x/-/is-function-x-3.1.1.tgz#36bb31e04b50e16c1d05a8376d003bfc9e27424b"
   dependencies:
-    has-to-string-tag-x "^1.4.0"
+    has-to-string-tag-x "^1.4.1"
     is-primitive "^2.0.0"
-    normalize-space-x "^1.3.2"
-    replace-comments-x "^1.0.1"
-    to-string-tag-x "^1.4.0"
+    normalize-space-x "^1.3.3"
+    replace-comments-x "^1.0.3"
+    to-string-tag-x "^1.4.1"
 
 is-function@^1.0.1:
   version "1.0.1"
@@ -3978,10 +3978,10 @@ is-obj@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
 
 is-object-like-x@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/is-object-like-x/-/is-object-like-x-1.5.0.tgz#036d1f5520f6016793d9e492761d70d8452f36f0"
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/is-object-like-x/-/is-object-like-x-1.5.1.tgz#11a7ad9fa2ec9b75185beb1d6fe6d0006d99ee94"
   dependencies:
-    is-function-x "^3.1.0"
+    is-function-x "^3.1.1"
     is-primitive "^2.0.0"
 
 is-path-cwd@^1.0.0:
@@ -5437,12 +5437,12 @@ normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
 
-normalize-space-x@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/normalize-space-x/-/normalize-space-x-1.3.2.tgz#f4e3984aea6cb9e26cf584224051ad0f18277498"
+normalize-space-x@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/normalize-space-x/-/normalize-space-x-1.3.3.tgz#8bdad9df8b79d5844219d7bd0daae010ea6c200c"
   dependencies:
-    trim-x "^1.0.2"
-    white-space-x "^2.0.2"
+    trim-x "^1.0.3"
+    white-space-x "^2.0.3"
 
 normalize-url@^1.4.0:
   version "1.9.1"
@@ -6909,11 +6909,10 @@ regenerator-transform@^0.10.0:
     private "^0.1.6"
 
 regex-cache@^0.4.2:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/regex-cache/-/regex-cache-0.4.3.tgz#9b1a6c35d4d0dfcef5711ae651e8e9d3d7114145"
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/regex-cache/-/regex-cache-0.4.4.tgz#75bdc58a2a1496cec48a12835bc54c8d562336dd"
   dependencies:
     is-equal-shallow "^0.1.3"
-    is-primitive "^2.0.0"
 
 regexpu-core@^1.0.0:
   version "1.0.0"
@@ -6986,9 +6985,9 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-replace-comments-x@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/replace-comments-x/-/replace-comments-x-1.0.1.tgz#fbc654cccd8ef6a4f5177b6a37a72b13a5662809"
+replace-comments-x@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/replace-comments-x/-/replace-comments-x-1.0.3.tgz#5f8edaf94556de0b51fc764f4e96556f9046fc5c"
   dependencies:
     is-string "^1.0.4"
 
@@ -7792,16 +7791,16 @@ to-fast-properties@^1.0.1, to-fast-properties@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.3.tgz#b83571fa4d8c25b82e231b06e3a3055de4ca1a47"
 
-to-string-tag-x@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/to-string-tag-x/-/to-string-tag-x-1.4.0.tgz#5229990ed1953078b76612ae379c7d17fc33394b"
+to-string-tag-x@^1.4.0, to-string-tag-x@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/to-string-tag-x/-/to-string-tag-x-1.4.1.tgz#c59a8d389e1d3180a2342f86b83c0cce3264f34e"
   dependencies:
     lodash.isnull "^3.0.0"
     validate.io-undefined "^1.0.3"
 
-to-string-x@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/to-string-x/-/to-string-x-1.4.0.tgz#20ba9639b5fcc050544d192604746fd825ce5c51"
+to-string-x@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/to-string-x/-/to-string-x-1.4.1.tgz#fd4a07708be58709c8127d595681176cb2a4de3c"
   dependencies:
     is-symbol "^1.0.1"
 
@@ -7825,34 +7824,34 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
 
-trim-left-x@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/trim-left-x/-/trim-left-x-1.3.3.tgz#e256e248229491edf0d084ef630a07ef08614c00"
+trim-left-x@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/trim-left-x/-/trim-left-x-1.3.5.tgz#8ec17d8cb1772a76f5e7cdee03637be11e8d5bff"
   dependencies:
-    to-string-x "^1.4.0"
-    white-space-x "^2.0.2"
+    to-string-x "^1.4.1"
+    white-space-x "^2.0.3"
 
 trim-newlines@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/trim-newlines/-/trim-newlines-1.0.0.tgz#5887966bb582a4503a41eb524f7d35011815a613"
 
-trim-right-x@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/trim-right-x/-/trim-right-x-1.3.2.tgz#b44588d6893dcea0bd85b451cd1608e94452beb0"
+trim-right-x@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/trim-right-x/-/trim-right-x-1.3.3.tgz#affa619e9e777a5ef89c3e5edb0423199c18db98"
   dependencies:
-    to-string-x "^1.4.0"
-    white-space-x "^2.0.2"
+    to-string-x "^1.4.1"
+    white-space-x "^2.0.3"
 
 trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-trim-x@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/trim-x/-/trim-x-1.0.2.tgz#9fe511cdddcfce568259fc77b1927fbc299a7f14"
+trim-x@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/trim-x/-/trim-x-1.0.3.tgz#b213d816f6b4abd2833cbe9829fd50e94345ca42"
   dependencies:
-    trim-left-x "^1.3.3"
-    trim-right-x "^1.3.2"
+    trim-left-x "^1.3.5"
+    trim-right-x "^1.3.3"
 
 tryit@^1.0.1:
   version "1.0.3"
@@ -8317,9 +8316,9 @@ which@^1.2.10, which@^1.2.12, which@^1.2.14, which@^1.2.9:
   dependencies:
     isexe "^2.0.0"
 
-white-space-x@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/white-space-x/-/white-space-x-2.0.2.tgz#8cd5d8858aa5d5cfa2901335718b8d8e8af8e99d"
+white-space-x@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/white-space-x/-/white-space-x-2.0.3.tgz#d8af2a54e2e16f78abe5ff1811d5e9d4190c60d6"
 
 wide-align@^1.1.0:
   version "1.1.2"
