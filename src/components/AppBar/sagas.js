@@ -1,17 +1,20 @@
 import { LOCATION_CHANGE } from 'react-router-redux';
 import { takeLatest, put, all, fork } from 'redux-saga/effects';
+import { startsWith, __ as _ } from 'ramda';
 
-import * as pathnames from '../../pathnames';
+import * as routes from '../../services/routes';
 import * as actions from './actions';
 
+const homeCategory = routes.home(_, '');
+
 export function* changeAppBarTitle({ payload: { pathname } }) {
-  if (pathname === pathnames.HOME) {
+  if (pathname === routes.root()) {
     yield put(actions.setTitle('lovvedit'));
-  } else if (pathname === pathnames.MOVIES) {
+  } else if (startsWith(homeCategory('movies'), pathname)) {
     yield put(actions.setTitle('Movies'));
-  } else if (pathname === pathnames.SHOWS) {
+  } else if (startsWith(homeCategory('shows'), pathname)) {
     yield put(actions.setTitle('TV Shows'));
-  } else if (pathname === pathnames.BOOKS) {
+  } else if (startsWith(homeCategory('books'), pathname)) {
     yield put(actions.setTitle('Books'));
   } else {
     yield put(actions.setTitle('lovvedit'));

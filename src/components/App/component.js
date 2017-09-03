@@ -6,16 +6,19 @@ import { scTheme, muiTheme } from './theme';
 import Main from '../Main';
 import Drawer from '../Drawer';
 import AppBar from '../AppBar';
+import Footer from '../Footer';
 
-const App = () =>
-  (<ThemeProvider theme={scTheme}>
+const App = () => (
+  <ThemeProvider theme={scTheme}>
     <MuiThemeProvider theme={muiTheme}>
       <div>
         <AppBar />
         <Drawer />
         <Main />
+        <Footer />
       </div>
     </MuiThemeProvider>
-  </ThemeProvider>);
+  </ThemeProvider>
+);
 
 export default App;

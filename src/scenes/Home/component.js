@@ -1,13 +1,16 @@
 import React from 'react';
-import Grid from 'material-ui/Grid';
+import { Grid } from 'material-ui';
+import styled from 'styled-components';
 
 import PostList from '../../components/PostList';
 
+const StyledGrid = styled(Grid)`width: 100%;`;
+
 const Home = () => (
   <Grid container spacing={0}>
-    <Grid item lg={9}>
+    <StyledGrid item lg={9}>
       <PostList />
-    </Grid>
+    </StyledGrid>
     <Grid item lg={3} hidden={{ mdDown: true }}>
       chau
     </Grid>

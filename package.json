@@ -29,7 +29,7 @@
     "react-redux": "5.0.6",
     "react-router-dom": "4.2.2",
     "react-router-redux": "next",
-    "react-spinkit": "3.0.0",
+    "react-transition-group": "^2.2.0",
     "recompose": "0.25.0",
     "redux": "3.7.2",
     "redux-devtools": "3.4.0",
@@ -38,7 +38,8 @@
     "redux-logger": "3.0.6",
     "redux-saga": "0.15.6",
     "reselect": "3.0.1",
-    "styled-components": "2.1.2"
+    "styled-components": "2.1.2",
+    "subscriptions-transport-ws": "^0.8.2"
   },
   "devDependencies": {
     "babel-eslint": "7.2.3",
@@ -62,7 +63,10 @@
   "author": "Diego Stratta <dbstratta@gmail.com>",
   "repository": "git@github.com:lovvedit/lovvedit.com.git",
   "lint-staged": {
-    "*.js": ["prettier-eslint --write", "git add"]
+    "*.js": [
+      "prettier-eslint --write",
+      "git add"
+    ]
   },
   "license": "MIT"
 }

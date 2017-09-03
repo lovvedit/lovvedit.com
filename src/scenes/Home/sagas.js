@@ -1,16 +1,19 @@
 import { LOCATION_CHANGE } from 'react-router-redux';
 import { takeLatest, put, all, fork } from 'redux-saga/effects';
+import { startsWith, __ as _ } from 'ramda';
 
-import * as pathnames from '../../pathnames';
-import * as actions from './actions';
+import * as routes from '../../services/routes';
+import { setCategory, setSort } from './actions';
+
+const homeCategory = routes.home(_, '');
 
 export function* changeCategory({ payload: { pathname } }) {
-  if (pathname === pathnames.MOVIES) {
-    yield put(actions.setCategory('MOVIE'));
-  } else if (pathname === pathnames.SHOWS) {
-    yield put(actions.setCategory('SHOW'));
-  } else if (pathname === pathnames.BOOKS) {
-    yield put(actions.setCategory('BOOK'));
+  if (startsWith(homeCategory('movies'), pathname)) {
+    yield all([put(setSort()), put(setCategory('MOVIE'))]);
+  } else if (startsWith(homeCategory('shows'), pathname)) {
+    yield put(setCategory('SHOW'));
+  } else if (startsWith(homeCategory('books'), pathname)) {
+    yield put(setCategory('BOOK'));
   }
 }
 

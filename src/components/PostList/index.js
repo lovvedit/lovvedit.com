@@ -16,6 +16,8 @@ const FetchPostsQuery = gql`
         node {
           id
           title
+          likeCount
+          liked
         }
       }
       pageInfo {
@@ -25,18 +27,34 @@ const FetchPostsQuery = gql`
   }
 `;
 
+const toggleLikeSubscription = gql`
+  subscription PostLikeToggled($id: ID!) {
+    postLikeToggled(id: $id) {
+      id
+      likeCount
+      liked
+    }
+  }
+`;
+
 const withPosts = graphql(FetchPostsQuery, {
   options: ({ category, after = null }) => ({ variables: { category, after } }),
-  props: ({ ownProps: { category }, data: { posts, loading, fetchMore } }) => ({
+  props: ({ ownProps: { category }, data: { posts, loading, fetchMore, subscribeToMore } }) => ({
     posts,
     category,
     loading,
+    subscribeToLikeToggle: postId => () =>
+      subscribeToMore({
+        document: toggleLikeSubscription,
+        variables: { id: postId },
+      }),
     loadMorePosts: () =>
       fetchMore({
         variables: { after: last(posts.edges).cursor, category },
-        updateQuery: ({ entry: previousEntry }, { fetchMoreResult: { posts: newPosts } }) => ({
-          entry: {
-            edges: [...previousEntry.edges, ...newPosts.edges],
+        updateQuery: (previousResult, { fetchMoreResult: { posts: newPosts } }) => ({
+          ...previousResult,
+          posts: {
+            edges: [...previousResult.edges, ...newPosts.edges],
           },
         }),
       }),

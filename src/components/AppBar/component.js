@@ -9,12 +9,14 @@ import styled from 'styled-components';
 
 const StyledTitle = styled.span`margin-left: 1rem;`;
 
+const StyledMenuButton = styled(IconButton)`margin-left: 0.75rem;`;
+
 const CustomAppBar = ({ title, onMenuClick }) => (
-  <AppBar position="static">
-    <Toolbar>
-      <IconButton onClick={onMenuClick} color="contrast" aria-label="Menu">
+  <AppBar>
+    <Toolbar disableGutters>
+      <StyledMenuButton onClick={onMenuClick} color="contrast" aria-label="Menu">
         <MenuIcon />
-      </IconButton>
+      </StyledMenuButton>
       <Typography type="title" color="inherit">
         <StyledTitle>{title}</StyledTitle>
       </Typography>
