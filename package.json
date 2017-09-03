@@ -57,7 +57,7 @@
     "prettier": "1.6.1",
     "prettier-eslint": "6.4.3",
     "prettier-eslint-cli": "4.3.0",
-    "react-scripts": "1.0.12",
+    "react-scripts": "1.0.13",
     "react-test-renderer": "15.6.1"
   },
   "author": "Diego Stratta <dbstratta@gmail.com>",
