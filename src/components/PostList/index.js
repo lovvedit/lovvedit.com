@@ -1,12 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { graphql } from 'react-apollo';
-import { branch, renderComponent } from 'recompose';
+import { branch, renderComponent, mapProps } from 'recompose';
 import gql from 'graphql-tag';
 import { last, compose } from 'ramda';
 
 import PostList from './component';
-import { selectors as homeSelectors } from '../../scenes/Home';
+import { mapRouteParamToCategory, mapRouteParamToSort } from './services/mappers';
 
 const FetchPostsQuery = gql`
   query FetchPosts($category: Category = SHOW, $after: String) {
@@ -61,12 +61,13 @@ const withPosts = graphql(FetchPostsQuery, {
   }),
 });
 
-const mapStateToProps = state => ({
-  category: homeSelectors.getCategory(state),
-});
-
 const enhance = compose(
-  connect(mapStateToProps),
+  withRouter,
+  mapProps(props => ({
+    ...props,
+    category: mapRouteParamToCategory(props.match.params.category),
+    sort: mapRouteParamToSort(props.match.params.sort),
+  })),
   withPosts,
   branch(({ loading }) => loading, renderComponent(() => <div>loading...</div>)),
 );
