@@ -16,6 +16,8 @@ export function* changeAppBarTitle({ payload: { pathname } }) {
     yield put(actions.setTitle('TV Shows'));
   } else if (startsWith(homeCategory('books'), pathname)) {
     yield put(actions.setTitle('Books'));
+  } else if ((routes.signIn(), pathname)) {
+    yield put(actions.setTitle('Log in'));
   } else {
     yield put(actions.setTitle('lovvedit'));
   }

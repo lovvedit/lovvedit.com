@@ -8,12 +8,10 @@ const StyledGrid = styled(Grid)`width: 100%;`;
 
 const Home = () => (
   <Grid container spacing={0}>
-    <StyledGrid item lg={9}>
+    <StyledGrid item lg={7}>
       <PostList />
     </StyledGrid>
-    <Grid item lg={3} hidden={{ mdDown: true }}>
-      chau
-    </Grid>
+    <Grid item lg={5} hidden={{ mdDown: true }} />
   </Grid>
 );
 

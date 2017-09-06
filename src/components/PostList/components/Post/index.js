@@ -16,7 +16,6 @@ const ToggleLikeMutation = gql`
 `;
 
 const withToggleLikeMutation = graphql(ToggleLikeMutation, {
-  options: ({ post: { id } }) => ({ variables: id }),
   props: ({ ownProps: { post: { id, likeCount, liked } }, mutate }) => ({
     onLikeClick: () =>
       mutate({
