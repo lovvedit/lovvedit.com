@@ -14,7 +14,8 @@ const LogInMutation = gql`
 const withLogin = graphql(LogInMutation, {
   props: ({ mutate }) => ({
     logIn: async (username, password) => {
-      mutate({ variables: { username, password } });
+      const response = await mutate({ variables: { username, password } });
+      console.log(response);
     },
   }),
 });
