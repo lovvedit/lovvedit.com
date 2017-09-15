@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Paper } from 'material-ui';
-import { Field } from 'redux-form';
 
-const SignIn = ({ handleSubmit }) => (
+import LoginForm from './components/LoginForm';
+
+const SignIn = ({ logIn }) => (
   <Paper>
-    <form onSubmit={handleSubmit}>
-      <Field name="username" type="text" />
-      <Field name="password" type="text" />
-    </form>
+    <LoginForm />
   </Paper>
 );
 
 SignIn.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
+  logIn: PropTypes.func.isRequired,
 };
 
 export default SignIn;
