@@ -7,7 +7,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "precoverage": "yarn test -- coverage",
+    "precoverage": "yarn test -- --coverage",
     "coverage": "codecov",
     "precommit": "lint-staged",
     "eject": "react-scripts eject"
@@ -64,10 +64,7 @@
   "author": "Diego Stratta <dbstratta@gmail.com>",
   "repository": "git@github.com:lovvedit/lovvedit.com.git",
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"]
   },
   "license": "MIT"
 }
