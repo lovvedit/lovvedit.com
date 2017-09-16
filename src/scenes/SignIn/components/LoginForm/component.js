@@ -6,6 +6,7 @@ const LoginForm = ({ handleSubmit }) => (
   <form onSubmit={handleSubmit}>
     <Field name="username" type="text" component="input" />
     <Field name="password" type="text" component="input" />
+    <button>sib :w</button>
   </form>
 );
 

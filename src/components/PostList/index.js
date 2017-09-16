@@ -4,13 +4,14 @@ import { graphql } from 'react-apollo';
 import { branch, renderComponent, mapProps } from 'recompose';
 import gql from 'graphql-tag';
 import { last, compose } from 'ramda';
+import { CircularProgress } from 'material-ui';
 
 import PostList from './component';
 import { mapRouteParamToCategory, mapRouteParamToSort } from './services/mappers';
 
 const FetchPostsQuery = gql`
-  query FetchPosts($category: Category = SHOW, $after: String) {
-    posts(filters: { category: $category }, pagination: { after: $after }) {
+  query FetchPosts($category: Category, $after: String) {
+    posts(filters: { category: $category }, after: $after) {
       edges {
         cursor
         node {
@@ -18,6 +19,7 @@ const FetchPostsQuery = gql`
           title
           likeCount
           liked
+          commentCount
         }
       }
       pageInfo {
@@ -27,7 +29,7 @@ const FetchPostsQuery = gql`
   }
 `;
 
-const toggleLikeSubscription = gql`
+const ToggleLikeSubscription = gql`
   subscription PostLikeToggled($id: ID!) {
     postLikeToggled(id: $id) {
       id
@@ -45,7 +47,7 @@ const withPosts = graphql(FetchPostsQuery, {
     loading,
     subscribeToLikeToggle: postId => () =>
       subscribeToMore({
-        document: toggleLikeSubscription,
+        document: ToggleLikeSubscription,
         variables: { id: postId },
       }),
     loadMorePosts: () =>
@@ -69,7 +71,7 @@ const enhance = compose(
     sort: mapRouteParamToSort(props.match.params.sort),
   })),
   withPosts,
-  branch(({ loading }) => loading, renderComponent(() => <div>loading...</div>)),
+  branch(({ loading }) => loading, renderComponent(() => <CircularProgress />)),
 );
 
 export default enhance(PostList);

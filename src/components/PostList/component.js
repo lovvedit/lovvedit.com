@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Transition } from 'react-transition-group';
+import { TransitionGroup, Transition } from 'react-transition-group';
 import { compose, map } from 'ramda';
 import styled from 'styled-components';
 
@@ -11,12 +11,11 @@ const StyledPost = styled(Post)`${({ state }) => state === 'entering'};`;
 const renderPosts = (posts, subscribeToLikeToggle) =>
   compose(
     map(post => (
-      <Transition>
+      <Transition key={post.id} timeout={500}>
         {state => (
           <StyledPost
             post={post}
             subscribeToLikeToggle={subscribeToLikeToggle(post.id)}
-            key={post.id}
             state={state}
           />
         )}
@@ -26,7 +25,7 @@ const renderPosts = (posts, subscribeToLikeToggle) =>
   )(posts.edges);
 
 const PostList = ({ posts, loadMorePosts, subscribeToLikeToggle }) => (
-  <div>{renderPosts(posts, subscribeToLikeToggle)}</div>
+  <TransitionGroup>{renderPosts(posts, subscribeToLikeToggle)}</TransitionGroup>
 );
 
 PostList.propTypes = {
