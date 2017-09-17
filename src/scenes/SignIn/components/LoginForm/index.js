@@ -27,7 +27,7 @@ const withLogin = graphql(LogInMutation, {
 });
 
 const mapDispatchToProps = dispatch => ({
-  loginSuccess: token => dispatch(authActions.loginSuccess(token)),
+  loginSuccess: token => dispatch(authActions.login(token)),
 });
 
 export default compose(

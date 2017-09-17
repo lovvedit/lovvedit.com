@@ -1,6 +1,5 @@
 import { ApolloClient } from 'react-apollo';
 import { SubscriptionClient } from 'subscriptions-transport-ws';
-import { always } from 'ramda';
 
 import { auth } from '../services/auth';
 
@@ -13,7 +12,7 @@ const client = new SubscriptionClient(GRAPHQL_ENDPOINT, {
    * We need to reload the page when authToken changes,
    * because there's no other way to restart the WS connection.
    */
-  connectionParams: always({ authToken: auth.getAuthToken() }),
+  connectionParams: () => ({ authToken: auth.getAuthToken() }),
 });
 
 export default new ApolloClient({
