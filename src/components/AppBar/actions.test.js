@@ -1,9 +1,9 @@
 import { menuClick, setTitle } from './actions';
-import * as types from './types';
+import { MENU_CLICK, SET_TITLE } from './types';
 
 describe('menuClick()', () => {
   it('should return the expected action', () => {
-    const action = { type: types.MENU_CLICK };
+    const action = { type: MENU_CLICK };
     expect(menuClick()).toEqual(action);
   });
 });
@@ -11,7 +11,7 @@ describe('menuClick()', () => {
 describe('setTitle()', () => {
   it('should return the expected action', () => {
     const title = 'test_title';
-    const action = { type: types.SET_TITLE, payload: title };
+    const action = { type: SET_TITLE, payload: title };
     expect(setTitle(title)).toEqual(action);
   });
 });
