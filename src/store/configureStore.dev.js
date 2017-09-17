@@ -1,9 +1,9 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import loggerMiddleware from 'redux-logger';
 import { routerMiddleware as createRouterMiddleware } from 'react-router-redux';
 import createSagaMiddleware, { END } from 'redux-saga';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-import DevTools from '../components/DevTools';
 import rootReducer from '../rootReducer';
 import history from '../config/history';
 import client from '../config/apolloClient';
@@ -15,9 +15,8 @@ export default function configureStore(initialState) {
   const store = createStore(
     rootReducer,
     initialState,
-    compose(
+    composeWithDevTools(
       applyMiddleware(client.middleware(), sagaMiddleware, routerMiddleware, loggerMiddleware),
-      DevTools.instrument(),
     ),
   );
 

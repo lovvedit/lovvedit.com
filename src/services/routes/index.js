@@ -1,10 +1,10 @@
-import { curry } from 'ramda';
+import { curry, always } from 'ramda';
 
-export const root = () => '/';
+export const root = always('/');
 export const home = curry((category, sort) => `/${category}/${sort}`);
 
-export const signIn = () => '/login';
-export const signUp = () => '/signup';
+export const signIn = always('/login');
+export const signUp = always('/signup');
 
 export const postDetail = postId => `/post/${postId}`;
 export const postCommentDetail = curry(

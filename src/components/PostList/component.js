@@ -1,27 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TransitionGroup, Transition } from 'react-transition-group';
-import { compose, map } from 'ramda';
+import { TransitionGroup } from 'react-transition-group';
+import { compose, map, prop } from 'ramda';
 import styled from 'styled-components';
 
 import Post, { postPropType } from './components/Post';
+import FadeUpTransition from '../FadeUpTransition';
 
 const StyledPost = styled(Post)`${({ state }) => state === 'entering'};`;
 
 const renderPosts = (posts, subscribeToLikeToggle) =>
   compose(
     map(post => (
-      <Transition key={post.id} timeout={500}>
-        {state => (
-          <StyledPost
-            post={post}
-            subscribeToLikeToggle={subscribeToLikeToggle(post.id)}
-            state={state}
-          />
-        )}
-      </Transition>
+      <FadeUpTransition key={post.id}>
+        <StyledPost post={post} subscribeToLikeToggle={subscribeToLikeToggle(post.id)} />
+      </FadeUpTransition>
     )),
-    map(edge => edge.node),
+    map(prop('node')),
   )(posts.edges);
 
 const PostList = ({ posts, loadMorePosts, subscribeToLikeToggle }) => (

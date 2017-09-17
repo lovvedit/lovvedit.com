@@ -1,19 +1,3 @@
-import { injectGlobal } from 'styled-components';
+import './globalStyles';
 
-// eslint-disable-next-line no-unused-expressions
-injectGlobal`
-  html {
-    font-family: 'Roboto', sans-serif;
-    height: 100%;
-  }
-
-  body {
-    min-height: 100%;
-    background-color: hsla(0, 0%, 95%, 1);
-    margin: 0;
-
-    position: relative;
-  }
-`;
-
-export { default } from './component';
+export { default } from './container';
