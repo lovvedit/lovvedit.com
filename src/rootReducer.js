@@ -4,7 +4,6 @@ import { reducer as formReducer } from 'redux-form';
 
 import { reducer as drawerReducer } from './components/Drawer';
 import { reducer as appBarReducer } from './components/AppBar';
-
 import client from './config/apolloClient';
 
 export default combineReducers({

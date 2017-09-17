@@ -2,7 +2,7 @@ import { LOCATION_CHANGE } from 'react-router-redux';
 import { takeLatest, put, all, fork } from 'redux-saga/effects';
 import { startsWith, __ as _ } from 'ramda';
 
-import * as routes from '../../services/routes';
+import { routes } from '../../utils';
 import * as actions from './actions';
 
 const homeCategory = routes.home(_, '');

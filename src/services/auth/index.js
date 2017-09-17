@@ -1,5 +1,5 @@
 import * as actions from './actions';
-import * as utils from './utils';
+import * as auth from './auth';
 import saga from './sagas';
 
-export { actions, utils, saga };
+export { actions, auth, saga };

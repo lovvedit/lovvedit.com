@@ -1,6 +1,6 @@
-import { put, takeEvery } from 'redux-saga/effects';
+import { put, takeEvery, all, fork } from 'redux-saga/effects';
 
-import { openDrawer, watchAppBarMenuClick } from './sagas';
+import rootSaga, { openDrawer, watchAppBarMenuClick } from './sagas';
 import { open } from './actions';
 import { types as appBarTypes } from '../AppBar';
 
@@ -12,9 +12,16 @@ describe('openDrawer()', () => {
 });
 
 describe('watchAppBarMenuClick()', () => {
-  it('should return a `takeEvery` effect for the right action', () => {
+  it('should yield a `takeEvery` effect for the right action', () => {
     const gen = watchAppBarMenuClick();
     const saga = openDrawer;
     expect(gen.next().value).toEqual(takeEvery(appBarTypes.MENU_CLICK, saga));
+  });
+});
+
+describe('rootSaga()', () => {
+  it('should return a `fork` effect with other sagas', () => {
+    const gen = rootSaga();
+    expect(gen.next().value).toEqual(all([fork(watchAppBarMenuClick)]));
   });
 });

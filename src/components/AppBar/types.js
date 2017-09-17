@@ -1,8 +1,8 @@
 import { concat } from 'ramda';
 
-const namespace = 'appbar';
-const addNamespace = concat(`${namespace}/`);
+const moduleNamespace = 'appBar';
+const addNamespace = concat(`${moduleNamespace}/`);
 
-export default namespace;
+export default moduleNamespace;
 export const MENU_CLICK = addNamespace('MENU_CLICK');
 export const SET_TITLE = addNamespace('SET_TITLE');

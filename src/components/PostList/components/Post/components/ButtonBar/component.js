@@ -5,7 +5,7 @@ import { IconButton } from 'material-ui';
 import { ThumbUp, Comment } from 'material-ui-icons';
 import styled from 'styled-components';
 
-import { postDetail } from '../../../../../../services/routes';
+import { routes } from '../../../../../../utils';
 
 const StyledButtonText = styled.span`
   margin-left: 0.3rem;
@@ -20,7 +20,7 @@ const ButtonBar = ({ post, onLikeClick }) => (
       <ThumbUp />
     </StyledIconButton>
     <StyledButtonText>{post.likeCount}</StyledButtonText>
-    <Link to={postDetail(post.id)}>
+    <Link to={routes.postDetail(post.id)}>
       <StyledIconButton>
         <Comment />
       </StyledIconButton>

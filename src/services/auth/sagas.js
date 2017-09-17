@@ -1,7 +1,7 @@
 import { takeLatest, all, call, apply, fork } from 'redux-saga/effects';
 
 import { LOGIN, LOGOUT } from './types';
-import { setAuthToken, removeAuthToken } from './utils';
+import { setAuthToken, removeAuthToken } from './auth';
 
 const { reload } = window.location;
 

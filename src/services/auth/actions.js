@@ -1,12 +1,7 @@
-import { createAction, createActions } from 'redux-actions';
+import { createAction } from 'redux-actions';
 import { identity } from 'ramda';
 
 import { LOGIN, LOGOUT } from './types';
 
-const { login } = createActions({
-  [LOGIN]: identity,
-});
-
-const logout = createAction(LOGOUT);
-
-export { login, logout };
+export const login = createAction(LOGIN, identity);
+export const logout = createAction(LOGOUT);

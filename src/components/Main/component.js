@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
-import * as routes from '../../services/routes';
+import { routes } from '../../utils';
 import Loadable from '../../config/loadable';
 
 const Home = Loadable({ loader: () => import('../../scenes/Home') });

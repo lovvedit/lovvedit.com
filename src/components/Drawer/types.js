@@ -1,9 +1,9 @@
 import { concat } from 'ramda';
 
-const namespace = 'drawer';
-const addNamespace = concat(`${namespace}/`);
+const moduleNamespace = 'drawer';
+const addNamespace = concat(`${moduleNamespace}/`);
 
-export default namespace;
+export default moduleNamespace;
 export const TOGGLE = addNamespace('TOGGLE');
 export const OPEN = addNamespace('OPEN');
 export const CLOSE = addNamespace('CLOSE');

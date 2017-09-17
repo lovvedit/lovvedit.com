@@ -7,7 +7,7 @@ import { last, compose } from 'ramda';
 import { CircularProgress } from 'material-ui';
 
 import PostList from './component';
-import { mapRouteParamToCategory, mapRouteParamToSort } from './services/mappers';
+import { routeParamMappers } from '../../utils';
 
 const FetchPostsQuery = gql`
   query FetchPosts($category: Category, $after: String) {
@@ -67,8 +67,8 @@ const enhance = compose(
   withRouter,
   mapProps(props => ({
     ...props,
-    category: mapRouteParamToCategory(props.match.params.category),
-    sort: mapRouteParamToSort(props.match.params.sort),
+    category: routeParamMappers.category(props.match.params.category),
+    sort: routeParamMappers.sort(props.match.params.sort),
   })),
   withPosts,
   branch(({ loading }) => loading, renderComponent(() => <CircularProgress />)),

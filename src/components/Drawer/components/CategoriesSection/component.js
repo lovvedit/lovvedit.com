@@ -7,7 +7,7 @@ import { __ as _ } from 'ramda';
 
 import StyledList from '../StyledList';
 import Item from '../Item';
-import * as routes from '../../../../services/routes';
+import { routes } from '../../../../utils';
 
 const homeHot = routes.home(_, 'hot');
 
