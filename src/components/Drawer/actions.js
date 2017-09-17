@@ -1,13 +1,7 @@
-import * as types from './types';
+import { createAction } from 'redux-actions';
 
-export const toggle = () => ({
-  type: types.TOGGLE,
-});
+import { TOGGLE, OPEN, CLOSE } from './types';
 
-export const open = () => ({
-  type: types.OPEN,
-});
-
-export const close = () => ({
-  type: types.CLOSE,
-});
+export const toggle = createAction(TOGGLE);
+export const open = createAction(OPEN);
+export const close = createAction(CLOSE);

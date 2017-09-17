@@ -1,12 +1,7 @@
-import { createAction, createActions } from 'redux-actions';
+import { createAction } from 'redux-actions';
 import { identity } from 'ramda';
 
-import namespace, { MENU_CLICK, SET_TITLE } from './types';
+import { MENU_CLICK, SET_TITLE } from './types';
 
-const menuClick = createAction(MENU_CLICK);
-
-const { [namespace]: { setTitle } } = createActions({
-  [SET_TITLE]: identity,
-});
-
-export { menuClick, setTitle };
+export const menuClick = createAction(MENU_CLICK);
+export const setTitle = createAction(SET_TITLE, identity);

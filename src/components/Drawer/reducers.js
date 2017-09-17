@@ -1,18 +1,17 @@
 import { combineReducers } from 'redux';
+import { handleActions } from 'redux-actions';
+import { always, not } from 'ramda';
 
 import { TOGGLE, OPEN, CLOSE } from './types';
 
-export function stateReducer(state = false, { type }) {
-  if (type === TOGGLE) {
-    return !state;
-  } else if (type === OPEN) {
-    return true;
-  } else if (type === CLOSE) {
-    return false;
-  }
-
-  return state;
-}
+export const stateReducer = handleActions(
+  {
+    [TOGGLE]: not,
+    [OPEN]: always(true),
+    [CLOSE]: always(false),
+  },
+  false,
+);
 
 export default combineReducers({
   open: stateReducer,

@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux';
 import { handleAction } from 'redux-actions';
-import { identity } from 'ramda';
 
-import { SET_TITLE } from './types';
+import { setTitle } from './actions';
 
-export const titleReducer = handleAction(SET_TITLE, identity, 'lovvedit');
+export const titleReducer = handleAction(setTitle, (state, { payload }) => payload, 'lovvedit');
 
 export default combineReducers({
   title: titleReducer,
