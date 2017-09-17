@@ -1,10 +1,12 @@
-import { always } from 'ramda';
+import { createAction, createActions } from 'redux-actions';
+import { identity } from 'ramda';
 
-import * as types from './types';
+import { LOGIN, LOGOUT } from './types';
 
-export const loginSuccess = token => ({
-  type: types.LOGIN_SUCCESS,
-  token,
+const { login } = createActions({
+  [LOGIN]: identity,
 });
 
-export const logoutSuccess = always({ type: types.LOGOUT_SUCCESS });
+const logout = createAction(LOGOUT);
+
+export { login, logout };

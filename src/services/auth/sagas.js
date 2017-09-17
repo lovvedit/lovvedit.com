@@ -1,6 +1,6 @@
 import { takeLatest, all, call, apply, fork } from 'redux-saga/effects';
 
-import { LOGIN_SUCCESS, LOGOUT_SUCCESS } from './types';
+import { LOGIN, LOGOUT } from './types';
 import { setAuthToken, removeAuthToken } from './utils';
 
 const { reload } = window.location;
@@ -11,7 +11,7 @@ export function* setAuthTokenSaga({ token }) {
 }
 
 export function* watchLoginSuccess() {
-  yield takeLatest(LOGIN_SUCCESS, setAuthTokenSaga);
+  yield takeLatest(LOGIN, setAuthTokenSaga);
 }
 
 export function* removeAuthTokenSaga() {
@@ -20,7 +20,7 @@ export function* removeAuthTokenSaga() {
 }
 
 export function* watchLogoutSuccess() {
-  yield takeLatest(LOGOUT_SUCCESS, removeAuthTokenSaga);
+  yield takeLatest(LOGOUT, removeAuthTokenSaga);
 }
 
 export default function* rootSaga() {

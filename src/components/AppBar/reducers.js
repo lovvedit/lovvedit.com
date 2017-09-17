@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { ifElse, equals, always } from 'ramda';
+import { handleAction } from 'redux-actions';
+import { identity } from 'ramda';
 
 import { SET_TITLE } from './types';
 
-export const titleReducer = (state = 'lovvedit', { type, title }) =>
-  ifElse(equals(SET_TITLE), always(title), always(state))(type);
+export const titleReducer = handleAction(SET_TITLE, identity, 'lovvedit');
 
 export default combineReducers({
   title: titleReducer,

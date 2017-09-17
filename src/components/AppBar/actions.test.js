@@ -11,7 +11,7 @@ describe('menuClick()', () => {
 describe('setTitle()', () => {
   it('should return the expected action', () => {
     const title = 'test_title';
-    const action = { type: types.SET_TITLE, title };
+    const action = { type: types.SET_TITLE, payload: title };
     expect(setTitle(title)).toEqual(action);
   });
 });

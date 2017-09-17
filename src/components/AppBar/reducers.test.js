@@ -1,10 +1,11 @@
 import * as types from './types';
+import { setTitle } from './actions';
 import { titleReducer } from './reducers';
 
 describe('titleReducer()', () => {
   it('should return `title` if the type is correct', () => {
     const title = 'test_title';
-    const action = { type: types.SET_TITLE, title };
+    const action = setTitle(title);
 
     expect(titleReducer(undefined, action)).toBe(title);
   });
