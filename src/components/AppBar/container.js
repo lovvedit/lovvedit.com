@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { compose } from 'ramda';
 
 import AppBar from './component';
 import * as actions from './actions';
@@ -12,4 +13,6 @@ const mapDispatchToProps = dispatch => ({
   onMenuClick: () => dispatch(actions.menuClick()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppBar);
+const enhance = compose(connect(mapStateToProps, mapDispatchToProps));
+
+export default enhance(AppBar);

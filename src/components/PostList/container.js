@@ -1,9 +1,8 @@
-import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { graphql } from 'react-apollo';
 import { branch, renderComponent, mapProps } from 'recompose';
 import gql from 'graphql-tag';
-import { last, compose } from 'ramda';
+import { last, compose, always, prop } from 'ramda';
 import { CircularProgress } from 'material-ui';
 
 import PostList from './component';
@@ -71,7 +70,7 @@ const enhance = compose(
     sort: routeParamMappers.sort(props.match.params.sort),
   })),
   withPosts,
-  branch(({ loading }) => loading, renderComponent(() => <CircularProgress />)),
+  branch(prop('loading'), compose(renderComponent, mapProps(always({})))(CircularProgress)),
 );
 
 export default enhance(PostList);
