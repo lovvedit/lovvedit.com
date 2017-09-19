@@ -9,6 +9,7 @@
     "test": "react-scripts test --env=jsdom",
     "precoverage": "yarn test -- --coverage",
     "coverage": "codecov",
+    "lint:css": "stylelint 'src/**/*.js'",
     "precommit": "lint-staged",
     "eject": "react-scripts eject"
   },
@@ -58,7 +59,11 @@
     "prettier-eslint": "8.1.0",
     "prettier-eslint-cli": "4.3.2",
     "react-scripts": "1.0.13",
-    "react-test-renderer": "15.6.1"
+    "react-test-renderer": "15.6.1",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^0.4.0",
+    "stylint": "^1.5.9"
   },
   "author": "Diego Stratta <dbstratta@gmail.com>",
   "repository": "git@github.com:lovvedit/lovvedit.com.git",
