@@ -1,4 +1,4 @@
-import { mapper } from '.';
+import { mapper } from './routeParamMappers';
 
 describe('mapper()', () => {
   it('should return a dict mapper', () => {

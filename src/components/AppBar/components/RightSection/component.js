@@ -1,17 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { branch, renderComponent, renderNothing } from 'recompose';
+import { branch, renderComponent, pure, nest } from 'recompose';
+import { prop, compose, not, map } from 'ramda';
 import styled from 'styled-components';
-import { prop } from 'ramda';
 
 import LoggedIn from './components/LoggedIn';
 import NotLoggedIn from './components/NotLoggedIn';
 
-const renderBranch = branch(prop('me'), renderComponent(LoggedIn), renderComponent(NotLoggedIn));
+// Style both components.
+const StyledWrapper = styled.div`margin-right: 1rem;`;
+const wrapComponents = map(component => nest(StyledWrapper, component));
+const [WrappedLoggedIn, WrappedNotLoggedIn] = wrapComponents([LoggedIn, NotLoggedIn]);
 
-const StyledWrapper = styled.div``;
+// If the component has a falsy `me` prop, render the generic component.
+const isNotAuthenticated = compose(not, prop('me'));
+const branchOnAuthentication = branch(isNotAuthenticated, renderComponent(WrappedNotLoggedIn));
 
-const RightSection = props => <StyledWrapper>{renderBranch(props)}</StyledWrapper>;
+const enhance = compose(pure, branchOnAuthentication);
 
-// export default branch(prop('loading'), renderNothing, renderComponent(RightSection));
-export default () => <div>hola</div>;
+export default enhance(WrappedLoggedIn);

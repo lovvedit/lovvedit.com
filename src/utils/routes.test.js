@@ -1,4 +1,4 @@
-import * as routes from '.';
+import * as routes from './routes';
 
 describe('Route helpers', () => {
   describe('root()', () => {
