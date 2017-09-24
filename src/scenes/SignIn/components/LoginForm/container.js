@@ -2,16 +2,17 @@ import { graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import gql from 'graphql-tag';
 import { reduxForm } from 'redux-form';
-import { compose } from 'ramda';
 import { withHandlers } from 'recompose';
+import { compose, path } from 'ramda';
 
 import LoginForm from './component';
-import { actions as authActions } from '../../../../services/auth';
+import { logIn as logInAction } from './actions';
+import { getError } from './selectors';
 
 const withForm = reduxForm({ form: 'login' });
 
-const onSubmit = ({ logIn, loginSuccess }) => async ({ username, password }) =>
-  loginSuccess(await logIn(username, password));
+const onSubmit = ({ logIn, dispatchLogin }) => ({ username, password }) =>
+  logIn(username, password).then(dispatchLogin, dispatchLogin);
 
 const LogInMutation = gql`
   mutation LogIn($username: String!, $password: String!) {
@@ -22,17 +23,21 @@ const LogInMutation = gql`
 const withLogin = graphql(LogInMutation, {
   props: ({ mutate }) => ({
     logIn: (username, password) =>
-      mutate({ variables: { username, password } }).then(response => response.data.logIn),
+      mutate({ variables: { username, password } }).then(path(['data', 'logIn'])),
   }),
 });
 
+const mapStateToProps = state => ({
+  loginError: getError(state),
+});
+
 const mapDispatchToProps = dispatch => ({
-  loginSuccess: token => dispatch(authActions.login(token)),
+  dispatchLogin: token => dispatch(logInAction(token)),
 });
 
 export default compose(
   withLogin,
-  connect(null, mapDispatchToProps),
+  connect(mapStateToProps, mapDispatchToProps),
   withHandlers({ onSubmit }),
   withForm,
 )(LoginForm);

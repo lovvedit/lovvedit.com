@@ -9,18 +9,18 @@ import FadeUpTransition from '../FadeUpTransition';
 
 const StyledPost = styled(Post)`${({ state }) => state === 'entering'};`;
 
-const renderPosts = (posts, subscribeToLikeToggle) =>
+const renderPosts = posts =>
   compose(
     map(post => (
       <FadeUpTransition key={post.id}>
-        <StyledPost post={post} subscribeToLikeToggle={subscribeToLikeToggle(post.id)} />
+        <StyledPost post={post} />
       </FadeUpTransition>
     )),
     map(prop('node')),
   )(posts.edges);
 
-const PostList = ({ posts, loadMorePosts, subscribeToLikeToggle }) => (
-  <TransitionGroup>{renderPosts(posts, subscribeToLikeToggle)}</TransitionGroup>
+const PostList = ({ posts, loadMorePosts }) => (
+  <TransitionGroup>{renderPosts(posts)}</TransitionGroup>
 );
 
 PostList.propTypes = {
@@ -28,7 +28,6 @@ PostList.propTypes = {
     edges: PropTypes.arrayOf(PropTypes.shape({ node: postPropType })),
   }).isRequired,
   loadMorePosts: PropTypes.func.isRequired,
-  subscribeToLikeToggle: PropTypes.func.isRequired,
 };
 
 export default PostList;

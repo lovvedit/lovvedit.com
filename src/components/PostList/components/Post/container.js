@@ -1,6 +1,5 @@
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
-import { lifecycle } from 'recompose';
 import { compose, inc, dec, not } from 'ramda';
 
 import Post, { postPropType } from './component';
@@ -33,14 +32,7 @@ const withToggleLikeMutation = graphql(ToggleLikeMutation, {
   }),
 });
 
-const enhance = compose(
-  lifecycle({
-    componentWillMount() {
-      this.props.subscribeToLikeToggle();
-    },
-  }),
-  withToggleLikeMutation,
-);
+const enhance = compose(withToggleLikeMutation);
 
 export default enhance(Post);
 export { postPropType };
