@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Drawer from 'material-ui/Drawer';
-import Divider from 'material-ui/Divider';
+import { Drawer, Divider } from 'material-ui';
 
 import CategoriesSection from './components/CategoriesSection';
 

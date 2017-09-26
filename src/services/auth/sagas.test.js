@@ -1,6 +1,13 @@
 import { takeLatest, fork, call, all } from 'redux-saga/effects';
 
-import rootSaga, { setAuthToken, watchLogin, removeAuthToken, watchLogout } from './sagas';
+import rootSaga, {
+  setAuthToken,
+  watchLogin,
+  removeAuthToken,
+  watchLogout,
+  watchAllLoginSources,
+  watchAllLogoutSources,
+} from './sagas';
 import { login, logout } from './actions';
 import { LOGIN, LOGOUT } from './types';
 import * as auth from './auth';
@@ -41,6 +48,13 @@ describe('watchLogout()', () => {
 describe('rootSaga()', () => {
   it('should return a `fork` effect with other sagas', () => {
     const gen = rootSaga();
-    expect(gen.next().value).toEqual(all([fork(watchLogin), fork(watchLogout)]));
+    expect(gen.next().value).toEqual(
+      all([
+        fork(watchAllLoginSources),
+        fork(watchLogin),
+        fork(watchAllLogoutSources),
+        fork(watchLogout),
+      ]),
+    );
   });
 });
