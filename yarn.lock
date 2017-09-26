@@ -2087,8 +2087,8 @@ debug@2.6.9, debug@^2.1.1, debug@^2.2.0, debug@^2.6.0, debug@^2.6.3, debug@^2.6.
     ms "2.0.0"
 
 debug@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.0.1.tgz#0564c612b521dc92d9f2988f0549e34f9c98db64"
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
     ms "2.0.0"
 
@@ -4236,8 +4236,8 @@ istanbul-reports@^1.1.2:
     handlebars "^4.0.3"
 
 iterall@^1.1.0, iterall@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.1.tgz#f7f0af11e9a04ec6426260f5019d9fcca4d50214"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.2.tgz#413332b3cdb46f8f5ede57d6cd8e3ca8a9df8816"
 
 jest-changed-files@^20.0.3:
   version "20.0.3"
@@ -6618,7 +6618,16 @@ react-transition-group@2.2.0, react-transition-group@^2.2.0:
     prop-types "^15.5.8"
     warning "^3.0.0"
 
-react@15.6.2, react@^15.5.4:
+react@16.0.0, "react@^15 || ^16":
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
+react@^15.5.4:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
@@ -6627,15 +6636,6 @@ react@15.6.2, react@^15.5.4:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
-
-"react@^15 || ^16":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
-  dependencies:
-    fbjs "^0.8.16"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.0"
 
 read-all-stream@^3.0.0:
   version "3.1.0"
@@ -7105,12 +7105,10 @@ safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, s
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
 safe-to-string-x@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/safe-to-string-x/-/safe-to-string-x-2.0.1.tgz#2cb0ce5eccf9279cb5460bd845f975527525252d"
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/safe-to-string-x/-/safe-to-string-x-2.0.3.tgz#c4c5242c854a6727e3f09df7a62b5b2522545b86"
   dependencies:
-    has-symbol-support-x "^1.4.1"
-    is-symbol "^1.0.1"
-    to-string-x "^1.4.1"
+    to-string-symbols-supported-x "^1.0.0"
 
 sane@~1.6.0:
   version "1.6.0"
@@ -7841,6 +7839,14 @@ to-property-key-x@^2.0.1:
     has-symbol-support-x "^1.4.1"
     to-primitive-x "^1.0.1"
     to-string-x "^1.4.1"
+
+to-string-symbols-supported-x@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/to-string-symbols-supported-x/-/to-string-symbols-supported-x-1.0.0.tgz#d435eb72312fe885b18047a96d59c75641476872"
+  dependencies:
+    cached-constructors-x "^1.0.0"
+    has-symbol-support-x "^1.4.1"
+    is-symbol "^1.0.1"
 
 to-string-tag-x@^1.4.1:
   version "1.4.2"
