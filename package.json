@@ -20,7 +20,7 @@
     "history": "4.7.2",
     "material-ui": "next",
     "material-ui-icons": "1.0.0-beta.10",
-    "prop-types": "15.5.10",
+    "prop-types": "15.6.0",
     "ramda": "0.24.1",
     "react": "15.6.1",
     "react-apollo": "1.4.15",
