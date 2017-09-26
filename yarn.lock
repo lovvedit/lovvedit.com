@@ -1374,6 +1374,10 @@ bytes@2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-2.5.0.tgz#4c9423ea2d252c270c41b2bdefeff9bb6b62c06a"
 
+cached-constructors-x@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/cached-constructors-x/-/cached-constructors-x-1.0.0.tgz#c421e3892a4b6f7794434bdcffd1299b330c181b"
+
 caller-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-0.1.0.tgz#94085ef63581ecd3daa92444a8fe94e82577751f"
@@ -5397,10 +5401,11 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
 
 normalize-space-x@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/normalize-space-x/-/normalize-space-x-1.3.3.tgz#8bdad9df8b79d5844219d7bd0daae010ea6c200c"
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/normalize-space-x/-/normalize-space-x-1.3.4.tgz#73a489ee94238309f65c9bc1a5be11d84ac069e7"
   dependencies:
-    trim-x "^1.0.3"
+    cached-constructors-x "^1.0.0"
+    trim-x "^1.0.4"
     white-space-x "^2.0.3"
 
 normalize-url@^1.4.0:
@@ -6624,17 +6629,7 @@ react-transition-group@2.2.0, react-transition-group@^2.2.0:
     prop-types "^15.5.8"
     warning "^3.0.0"
 
-react@15.6.1:
-  version "15.6.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
-  dependencies:
-    create-react-class "^15.6.0"
-    fbjs "^0.8.9"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.10"
-
-"react@^15 || ^16", react@^15.5.4:
+react@15.6.2, "react@^15 || ^16", react@^15.5.4:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
@@ -7844,15 +7839,15 @@ to-property-key-x@^2.0.1:
     to-string-x "^1.4.1"
 
 to-string-tag-x@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/to-string-tag-x/-/to-string-tag-x-1.4.1.tgz#c59a8d389e1d3180a2342f86b83c0cce3264f34e"
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/to-string-tag-x/-/to-string-tag-x-1.4.2.tgz#916a0c72d2f93dc27fccfe0ea0ce26cd78be21de"
   dependencies:
     lodash.isnull "^3.0.0"
     validate.io-undefined "^1.0.3"
 
-to-string-x@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/to-string-x/-/to-string-x-1.4.1.tgz#fd4a07708be58709c8127d595681176cb2a4de3c"
+to-string-x@^1.4.1, to-string-x@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/to-string-x/-/to-string-x-1.4.2.tgz#7d9a2528e159a9214e668137c1e10a045abe6279"
   dependencies:
     is-symbol "^1.0.1"
 
@@ -7870,34 +7865,36 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
 
-trim-left-x@^1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/trim-left-x/-/trim-left-x-1.3.5.tgz#8ec17d8cb1772a76f5e7cdee03637be11e8d5bff"
+trim-left-x@^1.3.7:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/trim-left-x/-/trim-left-x-1.3.7.tgz#df6b4adfc01b4f298a25022e7ea5052e360c9153"
   dependencies:
-    to-string-x "^1.4.1"
+    cached-constructors-x "^1.0.0"
+    to-string-x "^1.4.2"
     white-space-x "^2.0.3"
 
 trim-newlines@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/trim-newlines/-/trim-newlines-1.0.0.tgz#5887966bb582a4503a41eb524f7d35011815a613"
 
-trim-right-x@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/trim-right-x/-/trim-right-x-1.3.3.tgz#affa619e9e777a5ef89c3e5edb0423199c18db98"
+trim-right-x@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/trim-right-x/-/trim-right-x-1.3.4.tgz#5d258ce3155c58ed56186d6b695dbcac9666e28d"
   dependencies:
-    to-string-x "^1.4.1"
+    cached-constructors-x "^1.0.0"
+    to-string-x "^1.4.2"
     white-space-x "^2.0.3"
 
 trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-trim-x@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/trim-x/-/trim-x-1.0.3.tgz#b213d816f6b4abd2833cbe9829fd50e94345ca42"
+trim-x@^1.0.3, trim-x@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/trim-x/-/trim-x-1.0.4.tgz#30887b558d793656f3f7b02fe1a178051e54a3dd"
   dependencies:
-    trim-left-x "^1.3.5"
-    trim-right-x "^1.3.3"
+    trim-left-x "^1.3.7"
+    trim-right-x "^1.3.4"
 
 tryit@^1.0.1:
   version "1.0.3"
