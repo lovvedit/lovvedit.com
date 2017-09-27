@@ -6201,9 +6201,9 @@ prettier-eslint-cli@4.3.2:
     rxjs "^5.3.0"
     yargs "8.0.2"
 
-prettier-eslint@8.1.1, prettier-eslint@^8.0.0:
-  version "8.1.1"
-  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-8.1.1.tgz#826d71d79389c93d59edd56e3f0d58264a6ce36f"
+prettier-eslint@8.2.0, prettier-eslint@^8.0.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-8.2.0.tgz#90adb1f7513be86238a3f32afcea8d1cb4b79055"
   dependencies:
     common-tags "^1.4.0"
     dlv "^1.1.0"
@@ -7844,9 +7844,10 @@ to-number-x@^1.0.1, to-number-x@^1.1.0:
     trim-x "^1.0.3"
 
 to-object-x@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/to-object-x/-/to-object-x-1.4.1.tgz#f3d0ad47ecd59aeb4eedfae7918de5885685e0e6"
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/to-object-x/-/to-object-x-1.5.0.tgz#bd69dd4e104d77acc0cc0d84f5ac48f630aebe3c"
   dependencies:
+    cached-constructors-x "^1.0.0"
     require-object-coercible-x "^1.4.1"
 
 to-primitive-x@^1.0.1, to-primitive-x@^1.1.0:
