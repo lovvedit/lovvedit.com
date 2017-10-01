@@ -9,7 +9,7 @@ injectGlobal`
 
   body {
     min-height: 100%;
-    background-color: hsla(0, 0%, 95%, 1);
+    background-color: hsla(0, 0%, 7%, 1);
     margin: 0;
 
     position: relative;

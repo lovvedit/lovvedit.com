@@ -60,15 +60,18 @@
     "prettier-eslint-cli": "4.4.0",
     "react-scripts": "1.0.14",
     "react-test-renderer": "16.0.0",
+    "stylelint": "^8.1.1",
     "stylelint-config-standard": "17.0.0",
     "stylelint-config-styled-components": "0.1.1",
-    "stylelint-processor-styled-components": "1.0.0",
-    "stylint": "1.5.9"
+    "stylelint-processor-styled-components": "1.0.0"
   },
   "author": "Diego Stratta <dbstratta@gmail.com>",
   "repository": "git@github.com:lovvedit/lovvedit.com.git",
   "lint-staged": {
-    "*.js": ["prettier-eslint --write", "git add"]
+    "*.js": [
+      "prettier-eslint --write",
+      "git add"
+    ]
   },
   "license": "MIT"
 }

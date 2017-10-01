@@ -1,7 +1,7 @@
 import { createMuiTheme } from 'material-ui';
 import { red, orange } from 'material-ui/colors';
 import { css } from 'styled-components';
-import { reduce, compose } from 'ramda';
+import { reduce, compose, keys } from 'ramda';
 
 /**
  * Screen size breakpoints (for styled-components).
@@ -30,7 +30,7 @@ const media = compose(
     }),
     {},
   ),
-  Object.keys,
+  keys,
 )(breakpoints);
 
 /**
@@ -49,6 +49,7 @@ export const scTheme = {
  */
 export const muiTheme = createMuiTheme({
   palette: {
+    type: 'dark',
     primary: red,
     secondary: orange,
   },

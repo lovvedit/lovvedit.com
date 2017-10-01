@@ -15,8 +15,10 @@ const StyledTitleTypography = styled(Typography)`flex: 1;`;
 
 const StyledMenuButton = styled(IconButton)`margin-left: 0.75rem;`;
 
+const StyledAppBar = styled(AppBar)`background: hsla(0, 0%, 14%, 1) !important;`;
+
 const CustomAppBar = ({ title, onMenuClick }) => (
-  <AppBar>
+  <StyledAppBar>
     <Toolbar disableGutters>
       <StyledMenuButton onClick={onMenuClick} color="contrast" aria-label="Menu">
         <MenuIcon />
@@ -26,7 +28,7 @@ const CustomAppBar = ({ title, onMenuClick }) => (
       </StyledTitleTypography>
       <RightSection />
     </Toolbar>
-  </AppBar>
+  </StyledAppBar>
 );
 
 CustomAppBar.propTypes = {

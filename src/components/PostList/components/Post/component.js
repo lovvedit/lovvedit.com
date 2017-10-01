@@ -1,26 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Paper, Typography } from 'material-ui';
 import styled from 'styled-components';
 
-import Link from '../../../Link';
 import ButtonBar from './components/ButtonBar';
 
 const StyledPaper = styled(Paper)`
-  padding: 1rem 2rem 0.5rem;
+  padding: 1rem 1rem 0.3rem;
   margin: 1rem auto;
+
+  background-color: hsla(0, 0%, 14%, 1) !important;
 `;
 
-const ButtonBarWrapper = styled.div`margin-top: 0.5rem;`;
+const StyledTitle = styled(Typography)`margin-left: 0.7rem !important;`;
+
+const StyledTitleLink = styled(Link)`
+  text-decoration: none;
+  color: hsla(0, 100%, 100%, 1);
+
+  &:visited {
+    color: hsla(0, 0%, 60%, 1);
+  }
+`;
+
+const StyledButtonBar = styled(ButtonBar)`margin-top: 0.5rem;`;
 
 const Post = ({ post, onLikeClick }) => (
   <StyledPaper elevation={4}>
-    <Typography type="title">
-      <Link to={`/posts/${post.id}`}>{post.title}</Link>
-    </Typography>
-    <ButtonBarWrapper>
-      <ButtonBar post={post} onLikeClick={onLikeClick} />
-    </ButtonBarWrapper>
+    <StyledTitle type="title">
+      <StyledTitleLink to={`/posts/${post.id}`}>{post.title}</StyledTitleLink>
+    </StyledTitle>
+    <StyledButtonBar post={post} onLikeClick={onLikeClick} />
   </StyledPaper>
 );
 
