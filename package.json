@@ -11,7 +11,9 @@
     "coverage": "codecov",
     "lint:css": "stylelint 'src/**/*.js'",
     "precommit": "lint-staged",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "create-react-app": "1.4.1",
@@ -40,9 +42,10 @@
     "redux-saga": "0.15.6",
     "reselect": "3.0.1",
     "styled-components": "2.2.0",
-    "subscriptions-transport-ws": "0.9.0"
+    "subscriptions-transport-ws": "0.8.3"
   },
   "devDependencies": {
+    "@storybook/cli": "^3.2.10",
     "babel-eslint": "8.0.1",
     "codecov": "2.3.0",
     "create-react-app": "1.4.1",
@@ -63,7 +66,10 @@
     "stylelint": "^8.1.1",
     "stylelint-config-standard": "17.0.0",
     "stylelint-config-styled-components": "0.1.1",
-    "stylelint-processor-styled-components": "1.0.0"
+    "stylelint-processor-styled-components": "1.0.0",
+    "@storybook/react": "^3.2.11",
+    "@storybook/addon-actions": "^3.2.11",
+    "@storybook/addon-links": "^3.2.10"
   },
   "author": "Diego Stratta <dbstratta@gmail.com>",
   "repository": "git@github.com:lovvedit/lovvedit.com.git",
