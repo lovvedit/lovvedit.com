@@ -6,7 +6,7 @@
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
-"@storybook/addon-actions@^3.2.11":
+"@storybook/addon-actions@3.2.11", "@storybook/addon-actions@^3.2.11":
   version "3.2.11"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.2.11.tgz#4df5ed15369cd3fbe161efaf9e1f88ce7d6c8631"
   dependencies:
@@ -17,7 +17,7 @@
     react-inspector "^2.1.6"
     uuid "^3.1.0"
 
-"@storybook/addon-links@^3.2.10":
+"@storybook/addon-links@3.2.10", "@storybook/addon-links@^3.2.10":
   version "3.2.10"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.2.10.tgz#95ea12a405f42a570f4a6820722102310897d5f5"
   dependencies:
@@ -39,7 +39,7 @@
   version "3.2.10"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.2.10.tgz#881f51cc6b4f288133db08823222504a12e41ac7"
 
-"@storybook/cli@^3.2.10":
+"@storybook/cli@3.2.10":
   version "3.2.10"
   resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-3.2.10.tgz#3bc0cada10758ddaa7d286d224f3615c128617ee"
   dependencies:
@@ -79,7 +79,7 @@
     fuse.js "^3.0.1"
     prop-types "^15.5.9"
 
-"@storybook/react@^3.2.11":
+"@storybook/react@3.2.11":
   version "3.2.11"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-3.2.11.tgz#8b9813270ac85f6900b9dfa12f0e958b6320ee5f"
   dependencies:
