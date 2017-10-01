@@ -1,5 +1,8 @@
 import { withTheme } from 'material-ui';
+import { compose } from 'ramda';
 
 import ButtonBar from './component';
 
-export default withTheme(ButtonBar);
+const enhance = compose(withTheme());
+
+export default enhance(ButtonBar);
