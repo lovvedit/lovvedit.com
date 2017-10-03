@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { object, string, shape, number, bool, func } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { IconButton } from 'material-ui';
 import { ThumbUp, Comment } from 'material-ui-icons';
@@ -41,15 +41,15 @@ const ButtonBar = ({ post, onLikeClick, theme, className }) => (
 
 /* eslint-disable react/forbid-prop-types */
 ButtonBar.propTypes = {
-  post: PropTypes.shape({
-    id: PropTypes.string,
-    likeCount: PropTypes.number,
-    liked: PropTypes.bool,
-    commentCount: PropTypes.number,
+  post: shape({
+    id: string,
+    likeCount: number,
+    liked: bool,
+    commentCount: number,
   }).isRequired,
-  onLikeClick: PropTypes.func.isRequired,
-  theme: PropTypes.object.isRequired,
-  className: PropTypes.string,
+  onLikeClick: func.isRequired,
+  theme: object.isRequired,
+  className: string,
 };
 /* eslint-enable react/forbid-prop-types */
 

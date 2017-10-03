@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { bool, func } from 'prop-types';
 import { Drawer, Divider } from 'material-ui';
 
 import CategoriesSection from './components/CategoriesSection';
@@ -12,8 +12,8 @@ const CustomDrawer = ({ open, close }) => (
 );
 
 CustomDrawer.propTypes = {
-  open: PropTypes.bool,
-  close: PropTypes.func.isRequired,
+  open: bool,
+  close: func.isRequired,
 };
 
 CustomDrawer.defaultProps = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { object } from 'prop-types';
 import { ApolloProvider } from 'react-apollo';
 import { ConnectedRouter } from 'react-router-redux';
 import { MuiThemeProvider } from 'material-ui/styles';
@@ -23,11 +23,11 @@ const Root = ({ store, client, history, scTheme, muiTheme }) => (
 
 /* eslint-disable react/forbid-prop-types */
 Root.propTypes = {
-  store: PropTypes.object.isRequired,
-  client: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired,
-  scTheme: PropTypes.object.isRequired,
-  muiTheme: PropTypes.object.isRequired,
+  store: object.isRequired,
+  client: object.isRequired,
+  history: object.isRequired,
+  scTheme: object.isRequired,
+  muiTheme: object.isRequired,
 };
 /* eslint-enable react/forbid-prop-types */
 

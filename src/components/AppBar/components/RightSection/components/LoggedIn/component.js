@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { object, bool, any, func } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Menu, MenuItem, IconButton } from 'material-ui';
 import MoreVertIcon from 'material-ui-icons/MoreVert';
 
-const LoggedIn = ({ me, handleOpen, handleClose, handleLogout, anchorEl, open }) => (
-  <div>
+const LoggedIn = ({ me, handleOpen, handleClose, handleLogout, anchorEl, open, className }) => (
+  <div className={className}>
     <IconButton onClick={handleOpen} color="contrast">
       <MoreVertIcon />
     </IconButton>
@@ -20,18 +20,20 @@ const LoggedIn = ({ me, handleOpen, handleClose, handleLogout, anchorEl, open })
 
 /* eslint-disable react/forbid-prop-types */
 LoggedIn.propTypes = {
-  me: PropTypes.object,
-  open: PropTypes.bool.isRequired,
-  anchorEl: PropTypes.any,
-  handleOpen: PropTypes.func.isRequired,
-  handleClose: PropTypes.func.isRequired,
-  handleLogout: PropTypes.func.isRequired,
+  me: object,
+  open: bool.isRequired,
+  anchorEl: any,
+  handleOpen: func.isRequired,
+  handleClose: func.isRequired,
+  handleLogout: func.isRequired,
+  className: object,
 };
 /* eslint-enable react/forbid-prop-types */
 
 LoggedIn.defaultProps = {
   me: null,
   anchorEl: null,
+  className: '',
 };
 
 export default LoggedIn;

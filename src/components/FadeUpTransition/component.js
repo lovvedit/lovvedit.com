@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node, number } from 'prop-types';
 import { Transition } from 'react-transition-group';
 import { compose, prop, ifElse, always, contains, flip } from 'ramda';
 import styled, { keyframes } from 'styled-components';
@@ -32,12 +32,12 @@ const FadeUpTransition = props => (
 );
 
 FadeUpTransition.propTypes = {
-  children: PropTypes.node.isRequired,
-  timeout: PropTypes.number,
+  children: node.isRequired,
+  timeout: number,
 };
 
 FadeUpTransition.defaultProps = {
-  timeout: 6000,
+  timeout: 500,
 };
 
 export default FadeUpTransition;
