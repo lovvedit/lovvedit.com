@@ -2204,12 +2204,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000741"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000741.tgz#0be59111d4221f21f612b50ee5d67871a2c4a7a5"
+  version "1.0.30000743"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000743.tgz#bc8df2a257cf91ba024322266295af3ded852306"
 
 caniuse-lite@^1.0.30000697, caniuse-lite@^1.0.30000718, caniuse-lite@^1.0.30000726:
-  version "1.0.30000741"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000741.tgz#bc526bc2046e6bc38737cfd77d3026ef04b8f464"
+  version "1.0.30000743"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000743.tgz#f4f5c6750676ff8f6144ea40456c3729d5341769"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -4726,8 +4726,8 @@ ignore@^3.2.7, ignore@^3.3.3:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.5.tgz#c4e715455f6073a8d7e5dae72d2fc9d71663dba6"
 
 immutable@^3.8.1:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.1.tgz#200807f11ab0f72710ea485542de088075f68cd2"
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
 
 import-inspector@^2.0.0:
   version "2.0.0"
@@ -7719,10 +7719,6 @@ react-docgen@^2.15.0:
     node-dir "^0.1.10"
     recast "^0.12.6"
 
-react-dom-factories@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-dom-factories/-/react-dom-factories-1.0.2.tgz#eb7705c4db36fb501b3aa38ff759616aa0ff96e0"
-
 react-dom@16.0.0, "react-dom@^15 || ^16":
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.0.0.tgz#9cc3079c3dcd70d4c6e01b84aab2a7e34c303f58"
@@ -7831,12 +7827,11 @@ react-loadable@4.0.5:
     webpack-require-weak "^1.0.1"
 
 react-modal@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-2.3.2.tgz#af9d625da218461de3e87551609dfca12d8d4946"
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-2.3.3.tgz#bf4d100bbc426549b943e4294f7e9ea88e56e1a5"
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.5.10"
-    react-dom-factories "^1.0.0"
 
 react-popper@^0.7.3:
   version "0.7.3"
@@ -9098,9 +9093,9 @@ style-search@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
 
-styled-components@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.0.tgz#23823d305b1929723f927837735fdc2431545956"
+styled-components@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.1.tgz#f4835f1001c37bcc301ac3865b5d93466de4dd5b"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
