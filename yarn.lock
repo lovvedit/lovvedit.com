@@ -2089,8 +2089,8 @@ browserslist@^1.3.6, browserslist@^1.5.2, browserslist@^1.7.6:
     electron-to-chromium "^1.2.7"
 
 browserslist@^2.1.2, browserslist@^2.1.5, browserslist@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.5.0.tgz#0ea00d22813a4dfae5786485225a9c584b3ef37c"
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.5.1.tgz#68e4bc536bbcc6086d62843a2ffccea8396821c6"
   dependencies:
     caniuse-lite "^1.0.30000744"
     electron-to-chromium "^1.3.24"
@@ -3078,8 +3078,8 @@ detective@^4.3.1:
     defined "^1.0.0"
 
 diff@^3.2.0:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-3.3.1.tgz#aa8567a6eed03c531fc89d3f711cd0e5259dec75"
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-3.4.0.tgz#b1d85507daf3964828de54b37d0d73ba67dda56c"
 
 diffie-hellman@^5.0.0:
   version "5.0.2"
@@ -5742,6 +5742,12 @@ jss-props-sort@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/jss-props-sort/-/jss-props-sort-5.0.0.tgz#8839c88433f64e8c1dab1a7068796f19b84f9195"
 
+jss-rtl@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/jss-rtl/-/jss-rtl-0.2.0.tgz#5466e509e8f5daf307149ce70b555dc24c57d0a3"
+  dependencies:
+    rtl-css-js "^1.6.0"
+
 jss-vendor-prefixer@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/jss-vendor-prefixer/-/jss-vendor-prefixer-6.0.0.tgz#be58124f0cbed76e98cc8eb5219dbb260f057d0b"
@@ -6176,8 +6182,8 @@ material-ui-icons@1.0.0-beta.15:
     recompose "^0.25.1"
 
 material-ui@next:
-  version "1.0.0-beta.13"
-  resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.13.tgz#e85fdbfa8fad5c8be7b7c14f6915528b677faefd"
+  version "1.0.0-beta.16"
+  resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.16.tgz#e131c1f71707a676087f062e34ac94afb85d82bf"
   dependencies:
     babel-runtime "^6.26.0"
     brcast "^3.0.1"
@@ -6187,16 +6193,18 @@ material-ui@next:
     hoist-non-react-statics "^1.2.0"
     jss "^8.1.0"
     jss-preset-default "^3.0.0"
+    jss-rtl "^0.2.0"
     keycode "^2.1.9"
     lodash "^4.17.4"
+    normalize-scroll-left "^0.1.0"
     prop-types "^15.6.0"
-    react-event-listener "^0.5.0"
+    react-event-listener "^0.5.1"
     react-flow-types "^0.2.0-beta.2"
     react-jss "^7.2.0"
     react-popper "^0.7.3"
-    react-scrollbar-size "^2.0.1"
+    react-scrollbar-size "^2.0.2"
     react-transition-group "^2.2.1"
-    recompose "^0.25.1"
+    recompose "^0.26.0"
     scroll "^2.0.1"
     warning "^3.0.0"
 
@@ -6597,6 +6605,10 @@ normalize-path@^2.0.0, normalize-path@^2.0.1:
 normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
+
+normalize-scroll-left@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/normalize-scroll-left/-/normalize-scroll-left-0.1.0.tgz#917d04b9d80e390797209424f8baa2453daacb90"
 
 normalize-selector@^0.2.0:
   version "0.2.0"
@@ -7766,7 +7778,7 @@ react-error-overlay@^2.0.2:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
-react-event-listener@^0.5.0:
+react-event-listener@^0.5.0, react-event-listener@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.5.1.tgz#ba36076e47bc37c5a67ff5ccd4a9ff0f15621040"
   dependencies:
@@ -7943,7 +7955,7 @@ react-scripts@1.0.14:
   optionalDependencies:
     fsevents "1.1.2"
 
-react-scrollbar-size@^2.0.1:
+react-scrollbar-size@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/react-scrollbar-size/-/react-scrollbar-size-2.0.2.tgz#237dd091fa39dec8e3a6f720807787703c5ebf9e"
   dependencies:
@@ -8170,7 +8182,7 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-recompose@0.26.0:
+recompose@0.26.0, recompose@^0.26.0:
   version "0.26.0"
   resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.26.0.tgz#9babff039cb72ba5bd17366d55d7232fbdfb2d30"
   dependencies:
@@ -8582,6 +8594,10 @@ rst-selector-parser@^2.2.2:
   dependencies:
     lodash.flattendeep "^4.4.0"
     nearley "^2.7.10"
+
+rtl-css-js@^1.6.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/rtl-css-js/-/rtl-css-js-1.7.0.tgz#0a9b0a5ddcc7181b0b41977264f39647ba705770"
 
 run-async@^0.1.0:
   version "0.1.0"
@@ -9209,8 +9225,8 @@ stylelint@8.2.0:
     table "^4.0.1"
 
 stylis@^3.2.1:
-  version "3.2.20"
-  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.2.20.tgz#f4511b1ef825442cd7d965da30f37084151e9f7b"
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.3.0.tgz#57cb083dd67c46d6139565bab1d675647a3534f5"
 
 subscriptions-transport-ws@0.9.1:
   version "0.9.1"
