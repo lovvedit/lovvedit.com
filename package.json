@@ -61,7 +61,7 @@
     "prettier": "1.7.4",
     "prettier-eslint": "8.2.1",
     "prettier-eslint-cli": "4.4.0",
-    "react-scripts": "1.0.14",
+    "react-scripts": "1.0.15",
     "react-test-renderer": "16.0.0",
     "stylelint": "8.2.0",
     "stylelint-config-standard": "17.0.0",
