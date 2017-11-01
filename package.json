@@ -45,7 +45,7 @@
     "subscriptions-transport-ws": "0.9.1"
   },
   "devDependencies": {
-    "@storybook/cli": "3.2.13",
+    "@storybook/cli": "3.2.14",
     "babel-eslint": "8.0.1",
     "codecov": "3.0.0",
     "create-react-app": "1.4.3",
