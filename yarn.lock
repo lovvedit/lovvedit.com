@@ -54,12 +54,12 @@
   version "3.2.13"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.2.13.tgz#d4e04f99b1bb12cc3203839823218860358be480"
 
-"@storybook/cli@3.2.13":
-  version "3.2.13"
-  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-3.2.13.tgz#ac2263ba2c83c50d9a004eaa50a97fc6f097adac"
+"@storybook/cli@3.2.14":
+  version "3.2.14"
+  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-3.2.14.tgz#dff39cd2e65c4a6eaae72f96dffc14e5e51e9e73"
   dependencies:
-    "@storybook/codemod" "^3.2.13"
-    chalk "^2.2.0"
+    "@storybook/codemod" "^3.2.14"
+    chalk "^2.3.0"
     child-process-promise "^2.2.1"
     commander "^2.11.0"
     cross-spawn "^5.0.1"
@@ -70,9 +70,9 @@
     shelljs "^0.7.8"
     update-notifier "^2.3.0"
 
-"@storybook/codemod@^3.2.13":
-  version "3.2.13"
-  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-3.2.13.tgz#7e70d98e41c1e75c0f5a8e0f23ef0d6dc6f019d6"
+"@storybook/codemod@^3.2.14":
+  version "3.2.14"
+  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-3.2.14.tgz#00f85e35b484c52828156c313bfcff6b76a18bb9"
   dependencies:
     jscodeshift "^0.3.30"
 
@@ -2233,7 +2233,7 @@ chalk@2.1.0:
     escape-string-regexp "^1.0.5"
     supports-color "^4.0.0"
 
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.2.0:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.2.0, chalk@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.0.tgz#b5ea48efc9c1793dccc9b4767c93914d3f2d52ba"
   dependencies:
