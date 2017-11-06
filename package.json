@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@storybook/cli": "3.2.14",
-    "babel-eslint": "8.0.1",
+    "babel-eslint": "8.0.2",
     "codecov": "3.0.0",
     "create-react-app": "1.4.3",
     "eslint": "4.10.0",
