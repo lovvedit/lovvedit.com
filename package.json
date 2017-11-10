@@ -68,7 +68,7 @@
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.0.0",
     "@storybook/react": "3.2.14",
-    "@storybook/addon-actions": "3.2.14",
+    "@storybook/addon-actions": "3.2.15",
     "@storybook/addon-links": "3.2.14"
   },
   "author": "Diego Stratta <dbstratta@gmail.com>",
